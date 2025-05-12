@@ -223,24 +223,23 @@ header {
 
 #rotatingImgPre {
 
-    padding: 1rem;
-    border-radius: 1rem;
+    padding: 2rem;
+    border-radius: 2rem;
     color: white;
-    margin-left: 3.75rem;
+    margin-left: 3.5rem;
 
     transform: perspective(5000px) rotateY(var(--rotateYPre)) rotateX(var(--rotateXPre));
-    background-image: url("./images/image-removebg-preview.png");
+    background-image: url("./images/molecule.png");
     /* background-size: contain; */
     background-repeat: no-repeat;
     position: relative;
     transform-style: preserve-3d;
     background-position: center;
     /* overflow: hidden; */
-    height: 420px;
-    width: 300px;
+    height: 300px;
+    width: 350px;
 
 } 
-
 
 
 #rotatingImgPre::before,
@@ -343,18 +342,18 @@ header {
 
 #rotatingImgPre::before {
     inset: .5rem;
-    background: black;
+    background: url('images/molecule.png');
     transform: translateZ(-49px);
-    filter: blur(8px);
-    opacity: .6;
+    filter: blur(10px) brightness(0);
+    opacity: .7;
 }
 
 #rotatingImg1::before {
     inset: -.5rem;
     background: black;
     transform: translateZ(-49px);
-    filter: blur(8px);
-    opacity: .6;
+    filter: blur(10px);
+    opacity: .8;
 }
 
 #rotatingImg2::before {
@@ -402,7 +401,7 @@ header {
 
 #techStackCustomPre {
     border: 2px solid;
-    border-image-source: linear-gradient(205deg, rgba(255, 30, 30, 0.9), rgb(169, 233, 255));
+    border-image-source: linear-gradient(205deg, rgba(247, 175, 255, 0.9), rgb(169, 233, 255));
     border-image-slice: 1;
     animation: gradientPre 10s ease infinite;
 
@@ -421,7 +420,7 @@ header {
 #techStackCustom2 {
 
     border: 2px solid;
-    border-image-source: linear-gradient(205deg, rgba(243, 71, 255, 0.9), rgb(169, 233, 255));
+    border-image-source: linear-gradient(205deg, rgba(250, 180, 255, 0.9), rgb(169, 233, 255));
     border-image-slice: 1;
     animation: gradient2 10s ease infinite;
 
@@ -431,11 +430,11 @@ header {
 
 @keyframes gradientPre {
     0% {
-        border-image-source: linear-gradient(205deg, rgba(255, 158, 252, 0.9), rgb(169, 233, 255));
+        border-image-source: linear-gradient(205deg, rgba(255, 197, 253, 0.9), rgb(169, 233, 255));
     }
 
     100% {
-        border-image-source: linear-gradient(205deg, rgb(169, 233, 255), rgba(255, 158, 252, 0.9));
+        border-image-source: linear-gradient(205deg, rgb(169, 233, 255), rgba(255, 180, 252, 0.9));
     }
 }
 
@@ -451,11 +450,11 @@ header {
 
 @keyframes gradient2 {
     0% {
-        border-image-source: linear-gradient(205deg, rgba(243, 71, 255, 0.9), rgb(169, 233, 255));
+        border-image-source: linear-gradient(205deg, rgba(251, 192, 255, 0.9), rgb(169, 233, 255));
     }
 
     100% {
-        border-image-source: linear-gradient(205deg, rgb(169, 233, 255), rgba(243, 71, 255, 0.9));
+        border-image-source: linear-gradient(205deg, rgb(169, 233, 255), rgba(250, 175, 255, 0.9));
     }
 }
 
