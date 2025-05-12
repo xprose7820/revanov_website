@@ -22,17 +22,21 @@ body.light-mode .pre_secondCard {
     /* Other styling for dark mode */
 }
 
+
+
 body.light-mode .firstCardContent,
 body.light-mode header,
 body.light-mode #secondCardText,
 body.light-mode #thirdCardText,
 body.light-mode #pre_secondCardText,
-
 body.light-mode #containerAboutMeContent {
     color: black !important;
 
 }
-
+body.light-mode #logo_id {
+    color: black !important;
+    filter: brightness(0);
+}
 body.light-mode .social-links {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
@@ -51,6 +55,7 @@ header {
     justify-content: space-between;
     align-items: center;
     font-size: .9rem;
+    font-weight: 200;
     position: fixed;
     height: 10vh;
     width: 100%;
@@ -134,7 +139,7 @@ header {
     /* Add other styling as needed */
     /* border: 2px red solid; */
     max-width: 80%;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     pointer-events: none;
     user-select: none;
 }
