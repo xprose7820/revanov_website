@@ -239,7 +239,9 @@ header {
     height: 420px;
     width: 300px;
 
-}
+} 
+
+
 
 #rotatingImgPre::before,
 #rotatingImgPre::after {
@@ -270,7 +272,7 @@ header {
     position: absolute;
     inset: -1.5rem;
     /* Extended gradient, with quad repetition of the color sequence */
-    background: linear-gradient(-45deg, rgba(255, 35, 35, 0.9), rgb(169, 233, 255), rgba(255, 35, 35, 0.9), rgb(169, 233, 255), rgba(255, 33, 33, 0.9), rgb(169, 233, 255));
+    background: linear-gradient(-45deg, rgba(255, 158, 252, 0.9), rgb(169, 233, 255), rgba(255, 158, 252, 0.9), rgb(169, 233, 255), rgba(255, 158, 252, 0.9), rgb(169, 233, 255));
     background-size: 200% 200%;
     transform: translateZ(-50px);
     animation: moveGradientPre 10s linear infinite;
@@ -429,11 +431,11 @@ header {
 
 @keyframes gradientPre {
     0% {
-        border-image-source: linear-gradient(205deg, rgba(255, 25, 25, 0.9), rgb(169, 233, 255));
+        border-image-source: linear-gradient(205deg, rgba(255, 158, 252, 0.9), rgb(169, 233, 255));
     }
 
     100% {
-        border-image-source: linear-gradient(205deg, rgb(169, 233, 255), rgba(255, 27, 27, 0.9));
+        border-image-source: linear-gradient(205deg, rgb(169, 233, 255), rgba(255, 158, 252, 0.9));
     }
 }
 
