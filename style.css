@@ -188,14 +188,14 @@ header {
     margin-right: 3.2rem;
 
     transform: perspective(5000px) rotateY(var(--rotateY)) rotateX(var(--rotateX));
-    background-image: url("./images/image\ \(3\).png");
+    background-image: url("./images/image\ \(4\).png");
     background-size: contain;
     background-repeat: no-repeat;
     position: relative;
     transform-style: preserve-3d;
     background-position: center;
     /* overflow: hidden; */
-    height: 300px;
+    height: 275px;
     width: 600px;
     /* padding-left: 1rem;
     padding-right: 1rem; */
