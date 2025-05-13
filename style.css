@@ -183,12 +183,12 @@ header {
 
     /* border: 2px orange solid; */
     padding: 2rem;
-    border-radius: 1rem;
+    border-radius: 2rem;
     color: white;
     margin-right: 3.2rem;
 
     transform: perspective(5000px) rotateY(var(--rotateY)) rotateX(var(--rotateX));
-    background-image: url("./images/pathfinderimg.png");
+    background-image: url("./images/image\ \(3\).png");
     background-size: contain;
     background-repeat: no-repeat;
     position: relative;
@@ -196,7 +196,7 @@ header {
     background-position: center;
     /* overflow: hidden; */
     height: 300px;
-    width: 725px;
+    width: 600px;
     /* padding-left: 1rem;
     padding-right: 1rem; */
 }
@@ -282,7 +282,7 @@ header {
     position: absolute;
     inset: -1.5rem;
     /* Extended gradient, with quad repetition of the color sequence */
-    background: linear-gradient(-45deg, rgba(9, 0, 88, 0.9), rgb(169, 233, 255), rgba(9, 0, 88, 0.9), rgb(169, 233, 255), rgba(9, 0, 88, 0.9), rgb(169, 233, 255));
+    background: linear-gradient(-45deg, rgba(255, 194, 253, 0.9), rgb(169, 233, 255), rgba(255, 194, 253, 0.9), rgb(169, 233, 255), rgba(255, 194, 253, 0.9), rgb(169, 233, 255));
     background-size: 200% 200%;
     transform: translateZ(-50px);
     animation: moveGradient 10s linear infinite;
@@ -292,7 +292,7 @@ header {
     content: "";
     position: absolute;
     inset: -1.5rem;
-    background: linear-gradient(-45deg, rgba(243, 71, 255, 0.9), rgb(169, 233, 255), rgba(243, 71, 255, 0.9), rgb(169, 233, 255), rgba(243, 71, 255, 0.9), rgb(169, 233, 255));
+    background: linear-gradient(-45deg, rgba(255, 194, 253, 0.9), rgb(169, 233, 255), rgba(255, 194, 253, 0.9), rgb(169, 233, 255), rgba(255, 194, 253, 0.9), rgb(169, 233, 255));
     background-size: 200% 200%;
     transform: translateZ(-50px);
     animation: moveGradient2 10s linear infinite;
@@ -349,11 +349,11 @@ header {
 }
 
 #rotatingImg1::before {
-    inset: -.5rem;
+    inset: -.4rem;
     background: black;
     transform: translateZ(-49px);
     filter: blur(10px);
-    opacity: .8;
+    opacity: .6;
 }
 
 #rotatingImg2::before {
