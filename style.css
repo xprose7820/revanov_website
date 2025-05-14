@@ -440,11 +440,11 @@ header {
 
 @keyframes gradient {
     0% {
-        border-image-source: linear-gradient(205deg, rgba(9, 0, 88, 0.9), rgb(169, 233, 255));
+        border-image-source: linear-gradient(205deg, rgba(255, 194, 253, 0.9), rgb(169, 233, 255));
     }
 
     100% {
-        border-image-source: linear-gradient(205deg, rgb(169, 233, 255), rgba(9, 0, 88, 0.9));
+        border-image-source: linear-gradient(205deg, rgb(169, 233, 255), rgba(255, 194, 253, 0.9));
     }
 }
 
