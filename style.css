@@ -610,3 +610,29 @@ input:checked+.slider:before {
     pointer-events: auto;
     /* Enable pointer events when tooltip is visible */
 }
+
+.color-wave {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: lighter;
+    /* 1) a rainbow (or any) gradient twice as wide as the text */
+    background: linear-gradient(
+      to right,
+      #fb94ff 0%,   /* pink */
+      #ffffff 25%,  /* orange */
+      #fb94ff 50%,  /* teal */
+      #ffffff 75%,  /* blue */
+      #fb94ff 100%  /* pink again to loop smoothly */
+    );
+    background-size: 200% auto;     /* make the gradient twice as wide */
+    color: transparent;             /* hide the fill so only the gradient shows */
+    -webkit-background-clip: text;
+            background-clip: text;  /* clip the gradient to your text */
+    /* 2) slide it horizontally forever */
+    animation: colorWave 4s linear infinite;
+  }
+  
+  @keyframes colorWave {
+    from { background-position: 0% 0; }
+    to   { background-position: -200% 0; }
+  }
