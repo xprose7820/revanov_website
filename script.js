@@ -281,4 +281,12 @@ function copyEmail() {
     }, 2000);
   }
   
+  console.log('script.js loaded');
+  const ham = document.getElementById('hamburger');
+  const nav = document.querySelector('nav.header-links');
   
+  ham.addEventListener('click', () => {
+    console.log('🍔 clicked!');
+    nav.classList.toggle('open');
+    ham.classList.toggle('active');
+  });

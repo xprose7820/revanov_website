@@ -1,153 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <title>Revanov</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@200;300;400;500;700&family=Orbitron:wght@400;800&family=Titillium+Web:wght@200;300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header style="font-weight: lighter">
-      <div>
-        <img href="firstCardLink" id="logo_id" src="images/backgroundrem_shield.png" alt="Description of image" >
-        <a href="#firstCardLink" id="homeLink" style="position: relative; font-family: 'Titillium Web', sans-serif; top: -0.5rem; text-decoration: none; color: inherit; font-size: 4rem; font-weight: 200;">
-          R
-          <svg width="30" height="65" viewBox="0 0 30 65" style="vertical-align: middle; position: relative; top: -0.01rem; padding:0; margin-left:-.6rem; margin-right:-.55rem;" xmlns="http://www.w3.org/2000/svg">
-            <line x1="0" y1="5" x2="30" y2="5" stroke="currentColor" stroke-width="3"/>
-            <line x1="0" y1="25" x2="30" y2="25" stroke="currentColor" stroke-width="3"/>
-            <line x1="0" y1="45" x2="30" y2="45" stroke="currentColor" stroke-width="3"/>
-          </svg>
-          V<span id="upsideDownV" style="display:inline-block; transform: rotate(180deg); transform-origin: center; position: relative; top: 0.15rem;">V</span>NOV
-        </a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Revanov</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@200;300;400;500;700&family=Orbitron:wght@400;800&family=Titillium+Web:wght@200;300;400;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header style="font-weight: lighter">
+    <div>
+      <img href="firstCardLink" id="logo_id" src="images/backgroundrem_shield.png" alt="Description of image">
+      <a href="#firstCardLink" id="homeLink"
+        style="position: relative; font-family: 'Titillium Web', sans-serif; top: -0.5rem; text-decoration: none; color: inherit; font-size: 4rem; font-weight: 200;">
+        R
+        <svg width="30" height="65" viewBox="0 0 30 65"
+          style="vertical-align: middle; position: relative; top: -0.01rem; padding:0; margin-left:-.6rem; margin-right:-.55rem;"
+          xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="5" x2="30" y2="5" stroke="currentColor" stroke-width="3" />
+          <line x1="0" y1="25" x2="30" y2="25" stroke="currentColor" stroke-width="3" />
+          <line x1="0" y1="45" x2="30" y2="45" stroke="currentColor" stroke-width="3" />
+        </svg>
+        V<span id="upsideDownV"
+          style="display:inline-block; transform: rotate(180deg); transform-origin: center; position: relative; top: 0.15rem;">V</span>NOV
+      </a>
+    </div>
+    <div class="header-wrapper">
+      <!-- Hamburger button -->
+      <div id="hamburger" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <div class="header-links">
-        <div class="header-links">
-          <a href="#pre_secondCardLink">Approach</a>
-          <a href="#aboutMeTab">About</a>
-        
-        </div>
+
+      <!-- Nav links -->
+      <nav class="header-links">
+        <a id="projectsLink" href="#pre_secondCardLink">Approach</a>
+        <a id="aboutMeTab" href="#aboutMeTab">About</a>
+        <!-- add more links here -->
         <label class="switch">
           <input type="checkbox" id="modeToggle" />
           <span class="slider round"></span>
         </label>
-      </div>
-    </header>
-    <section id="projectsContent" class="visible">
-      <section class="firstCard" id="firstCardLink">
-        <canvas id="canvas"></canvas>
-        <div class="firstCardContent">
-          <h1 style="font-weight: 200">Uncover the Unknown.</h1>
-         <p style="font-size: 1.5rem;">
+      </nav>
+    </div>
+  </header>
+  <section id="projectsContent" class="visible">
+    <section class="firstCard" id="firstCardLink">
+      <canvas id="canvas"></canvas>
+      <div class="firstCardContent">
+        <h1 style="font-weight: 200">Uncover the Unknown.</h1>
+        <p style="font-size: 1.5rem;">
           Revolutionizing Detection, Redefining Defense.
-         </p>
-        </div>
-      </section>
-
-      <section class="pre_secondCard" id="pre_secondCardLink">
-        <div id="pre_secondCardText">
-          <div style="font-size: 1.75rem; font-weight: bold; text-align: right;">Detection of Novel Threat Compounds</div>
-          <div style="font-weight: lighter; font-size: 1rem; line-height: 1.5rem;">Using SOTA techniques, we're now able to accurately predict exact molecular structures of <span style="font-size: 1.25rem !important; font-weight: 600;">NOVEL</span> compounds directly from mass spectra—<span style="font-size: 1.25rem !important; font-weight: 600;">INDEPENDENT</span> of instrument type. 
-        
-        <p style="font-size: .75rem;line-height: 1.25rem;">Future developments may incorporate additional modalities, such as FTIR, to enable multimodal data fusion and further enhance structural inference. </p>
-          </div>
-          <div id="techStackCustom1" style="font-weight: lighter;">
-            <span class="color-wave">
-              C2(c)[C@@]1c2C[C@@H]c@cc1[C@@H](C)C(=O)C2c
-            </span>
-          </div>
-        </div>
-
-        <a href="https://livegesturev8.uk.r.appspot.com/" target="_blank"> <div id="rotatingImgPre"></div></a>
-      </section>
-
-      <section class="secondCard" id="secondCardLink">
-        <a href="https://xprose7820.github.io/PathFinderViz/" target="_blank"> <div id="rotatingImg1"></div></a>
-        <div id="secondCardText">
-          <div style="font-size: 1.75rem; font-weight: bold">Expert chemist-level molecular insight</div>
-          <div style="font-weight: lighter; font-size: 1.25rem;">
-            Our AI ingests SMILES data to assemble a complete molecular dossier—substructure, functional groups, 
-            receptor-binding profiles, and key physicochemical metrics—leveraging this rich information to pinpoint the true identity of novel compounds.
-          </div>
-          <div id="techStackCustom1" style="font-weight: lighter;">
-            <span class="color-wave">
-              O1C=C[c@H]c@([c@H]1O2)c3cccc2cc(OC)c4c3C12N
-            </span>
-          </div>
-        </div>
-      </section>
-
-      <section class="thirdCard" id="thirdCardLink">
-        <div id="thirdCardText">
-          <div style="font-size: 1.75rem; font-weight: bold; text-align: right"></div>
-          <div style="font-weight: lighter; text-align: right">
-            
-          </div>
-          <div id="techStackCustom2" style="font-weight: lighter">
-            <span style="font-size: 0.6rem; font-weight: lighter">
-          </div>
-        </div>
-
-        <a href="https://bugtrackerv2.azurewebsites.net/" target="_blank"> <div id="rotatingImg2"></div></a>
-      </section>
-    </section>
-    <section id="aboutMeContent" class="hidden" style="margin-top: 6.5rem">
-      <div id="containerAboutMeContent" class="containerAbout">
-        <div><h1 style="font-weight: lighter; font-size: 2rem">About</h1></div>
-
-        <div class="social-links">
-          <ul>
-            <li id="email-item">
-              <span>Email</span>
-              <span class="tooltip-text" onclick="copyEmail()">Copy Email?</span>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/alexander-huynh31/" target="_blank" style="text-decoration: none; color: inherit">LinkedIn</a>
-            </li>
-          </ul>
-          <!-- Added a div for the paragraph, assuming class="bio" is for biography or similar content -->
-          <div class="bio">
-            <p>
-              I'm Alexander Huynh, a Software Developer with a strong Physics and Math background from Purdue University. Skilled in languages like C#
-              and Python, I excel in both high-level and lower-level programming challenges. My aim is to innovate and optimize software systems,
-              bringing a research-driven problem-solving approach to any tech team.
-            </p>
-          </div>
-        </div>
-
-        <section class="experiences">
-          <h2>Experiences</h2>
-          <!-- Repeat this block for each experience -->
-          <div class="experience">
-            <div class="date">2018 - 2022</div>
-            <div class="company">Purdue University</div>
-            <div class="role">Undergraduate Researcher - BioPhysics</div>
-            <div class="action">Analyze spectroscopy data, operate Raman laser / UV-Vis</div>
-          </div>
-          <!-- ... other experiences ... -->
-          <div class="experience">
-            <div class="date">2019 - 2020</div>
-            <div class="company">Purdue University</div>
-            <div class="role">Undergraduate Researcher - Dark Matter</div>
-            <div class="action">Uncover Dark Matter phenomena (spallation)</div>
-          </div>
-          <div class="experience">
-            <div class="date">2021 - 2021</div>
-            <div class="company">Missiissippi State University</div>
-            <div class="role">Undergraduate Researcher - High Performance Computing</div>
-            <div class="action">Develop algorithms for anomaly detection in Nano-materials</div>
-          </div>
-        </section>
+        </p>
       </div>
     </section>
 
-    <script src="./script.js"></script>
-  </body>
+    <section class="pre_secondCard" id="pre_secondCardLink">
+      <div id="pre_secondCardText">
+        <div style="font-size: 1.75rem; font-weight: bold; text-align: right;">Detection of Novel Threat Compounds</div>
+        <div style="font-weight: lighter; font-size: 1rem; line-height: 1.5rem;">Using SOTA techniques, we're now able
+          to accurately predict exact molecular structures of <span
+            style="font-size: 1.25rem !important; font-weight: 600;">NOVEL</span> compounds directly from mass
+          spectra—<span style="font-size: 1.25rem !important; font-weight: 600;">INDEPENDENT</span> of instrument type.
+
+          <p style="font-size: .75rem;line-height: 1.25rem;">Future developments may incorporate additional modalities,
+            such as FTIR, to enable multimodal data fusion and further enhance structural inference. </p>
+        </div>
+        <div id="techStackCustom1" style="font-weight: lighter;">
+          <span class="color-wave">
+            C2(c)[C@@]1c2C[C@@H]c@cc1[C@@H](C)C(=O)C2c
+          </span>
+        </div>
+      </div>
+
+      <a href="https://livegesturev8.uk.r.appspot.com/" target="_blank">
+        <div id="rotatingImgPre"></div>
+      </a>
+    </section>
+
+    <section class="secondCard" id="secondCardLink">
+      <a href="https://xprose7820.github.io/PathFinderViz/" target="_blank">
+        <div id="rotatingImg1"></div>
+      </a>
+      <div id="secondCardText">
+        <div style="font-size: 1.75rem; font-weight: bold">Expert chemist-level molecular insight</div>
+        <div style="font-weight: lighter; font-size: 1.25rem;">
+          Our AI ingests SMILES data to assemble a complete molecular dossier—substructure, functional groups,
+          receptor-binding profiles, and key physicochemical metrics—leveraging this rich information to pinpoint the
+          true identity of novel compounds.
+        </div>
+        <div id="techStackCustom1" style="font-weight: lighter;">
+          <span class="color-wave">
+            O1C=C[c@H]c@([c@H]1O2)c3cccc2cc(OC)c4c3C12N
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="thirdCard" id="thirdCardLink">
+      <div id="thirdCardText">
+        <div style="font-size: 1.75rem; font-weight: bold; text-align: right"></div>
+        <div style="font-weight: lighter; text-align: right">
+
+        </div>
+        <div id="techStackCustom2" style="font-weight: lighter">
+          <span style="font-size: 0.6rem; font-weight: lighter">
+        </div>
+      </div>
+
+      <a href="https://bugtrackerv2.azurewebsites.net/" target="_blank">
+        <div id="rotatingImg2"></div>
+      </a>
+    </section>
+  </section>
+  <section id="aboutMeContent" class="hidden" style="margin-top: 6.5rem">
+    <div id="containerAboutMeContent" class="containerAbout">
+      <div>
+        <h1 style="font-weight: lighter; font-size: 2rem">About</h1>
+      </div>
+
+      <div class="social-links">
+        <ul>
+          <li id="email-item">
+            <span>Email</span>
+            <span class="tooltip-text" onclick="copyEmail()">Copy Email?</span>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/alexander-huynh31/" target="_blank"
+              style="text-decoration: none; color: inherit">LinkedIn</a>
+          </li>
+        </ul>
+        <!-- Added a div for the paragraph, assuming class="bio" is for biography or similar content -->
+        <div class="bio">
+          <p>
+            I'm Alexander Huynh, a Software Developer with a strong Physics and Math background from Purdue University.
+            Skilled in languages like C#
+            and Python, I excel in both high-level and lower-level programming challenges. My aim is to innovate and
+            optimize software systems,
+            bringing a research-driven problem-solving approach to any tech team.
+          </p>
+        </div>
+      </div>
+
+      <section class="experiences">
+        <h2>Experiences</h2>
+        <!-- Repeat this block for each experience -->
+        <div class="experience">
+          <div class="date">2018 - 2022</div>
+          <div class="company">Purdue University</div>
+          <div class="role">Undergraduate Researcher - BioPhysics</div>
+          <div class="action">Analyze spectroscopy data, operate Raman laser / UV-Vis</div>
+        </div>
+        <!-- ... other experiences ... -->
+        <div class="experience">
+          <div class="date">2019 - 2020</div>
+          <div class="company">Purdue University</div>
+          <div class="role">Undergraduate Researcher - Dark Matter</div>
+          <div class="action">Uncover Dark Matter phenomena (spallation)</div>
+        </div>
+        <div class="experience">
+          <div class="date">2021 - 2021</div>
+          <div class="company">Missiissippi State University</div>
+          <div class="role">Undergraduate Researcher - High Performance Computing</div>
+          <div class="action">Develop algorithms for anomaly detection in Nano-materials</div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <script src="./script.js"> 
+  </script>
+</body>
+
 </html>
