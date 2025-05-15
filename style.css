@@ -324,9 +324,11 @@ header {
 #rotatingImgPre::before {
     inset: .5rem;
     background: url('images/molecule.png');
-    transform: translateZ(-49px);
-    filter: blur(10px) brightness(0);
+    transform: translateZ(-1rem);
+    filter: blur(9px) brightness(0);
     opacity: .7;
+   
+    
 }
 
 #rotatingImg1::before {
@@ -701,6 +703,11 @@ nav.header-links {
         padding: 1rem;
         height: auto;
     }
+    #coolE{ 
+        display: inline-block;    /* turn your SVG into an inline‐block box */
+  position: relative;       /* enable top/left offsets */
+  top: -5rem; 
+    }
 
     /* Logo adjustments */
     #logo_id {
@@ -713,6 +720,7 @@ nav.header-links {
     }
     #upsideDownV {
         top: 0.2rem !important;
+       
     }
 
     /* Show hamburger */
@@ -755,4 +763,50 @@ nav.header-links {
     .hamburger.active span:nth-child(3) {
         transform: translateY(-7.5px) rotate(-45deg);
     }
+   /* Stack cards & center text */
+   
+   .pre_secondCard,
+   .secondCard,
+   .thirdCard {
+     display:flex; flex-direction:column;
+     align-items:center; padding:1rem 0;
+     margin-top:2rem; height:auto;
+   }
+   #pre_secondCardText,
+   #secondCardText,
+   #thirdCardText {
+     width:100%; text-align:center; margin-bottom:1rem;
+   }
+ 
+   /* Responsive background-image divs */
+   
+  #rotatingImgPre,
+  #rotatingImg1,
+  #rotatingImg2 {
+    width: 50vw;               /* whatever fraction you like */
+    max-width: 350px;          /* don’t exceed your desktop size */
+    aspect-ratio: 350 / 350;   /* preserve original proportions */
+    margin: 0 auto 1.5rem;
+    padding: 2rem;             /* keep your padding if you want */
+
+    /* <<< new lines below >>> */
+    background-size: contain;  /* scale the PNG down to fit */
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #rotatingImgPre{ 
+    height: 20vw;
+  }
+ #rotatingImg1{ 
+    height: 20vw;
+ }
+   /* Tweak font sizes */
+   #pre_secondCardText h2,
+   #secondCardText h2 {
+     font-size:1.5rem;
+   }
+   #pre_secondCardText p {
+     font-size:0.9rem;
+   }
+  
 }
