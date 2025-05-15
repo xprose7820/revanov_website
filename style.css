@@ -154,6 +154,7 @@ header {
     align-items: center;
     position: relative;
     height: 85vh;
+    top: 2vh;
     background-color: black;
     margin-top: 2rem;
 
@@ -797,6 +798,7 @@ nav.header-links {
   #rotatingImgPre{ 
     height: 20vw;
   }
+  
  #rotatingImg1{ 
     height: 20vw;
  }
@@ -808,5 +810,9 @@ nav.header-links {
    #pre_secondCardText p {
      font-size:0.9rem;
    }
+   #pre_secondCardText {
+    height: auto;               /* let the content decide its height */
+    justify-content: flex-start;/* stack items without extra space */
+  }
   
 }

@@ -308,7 +308,7 @@ function enableTilt() {
     const beta  = event.beta  ?? 0;
     console.log('tilt event:', { gamma, beta });
   
-    const rotY = gamma * 0.3;
+    const rotY = gamma * 0.8;
     const rotX = beta  * 0.2;
   
     rotatingImgPre.style.setProperty('--rotateYPre',  rotY + 'deg');
@@ -321,3 +321,24 @@ function enableTilt() {
   
   // call it right away (script is at end of body)
   enableTilt();
+  function doMobileReorder() {
+    // Card 1
+    const tech1 = document.getElementById('techStackCustom1');
+    const linkPre = document.getElementById('rotatingImgPre')?.parentElement;
+    if (tech1 && linkPre) linkPre.insertAdjacentElement('afterend', tech1);
+  
+    // Card 2
+    const tech2 = document.getElementById('techStackCustom2');
+    const link1 = document.getElementById('rotatingImg1')?.parentElement;
+    if (tech2 && link1) tech2.insertAdjacentElement('beforebegin', link1);
+  }
+  
+  const mq = window.matchMedia('(max-width: 768px)');
+  mq.addEventListener('change', e => {
+    if (e.matches) doMobileReorder();
+  });
+  
+  // If already mobile at page load, run it once
+  if (mq.matches) {
+    document.addEventListener('DOMContentLoaded', doMobileReorder);
+  }
