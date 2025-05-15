@@ -292,50 +292,32 @@ function copyEmail() {
   });
 
 
-
-// 1) A helper to request permission on iOS (if needed)
+// ─── TILT SUPPORT (Android & iOS) ───────────────────────────────────────────
 function enableTilt() {
     if (typeof DeviceOrientationEvent?.requestPermission === 'function') {
-      // iOS 13+ requires user gesture
       DeviceOrientationEvent.requestPermission()
-        .then(permission => {
-          if (permission === 'granted') {
-            window.addEventListener('deviceorientation', handleTilt);
-          }
-        })
+        .then(perm => perm === 'granted' && window.addEventListener('deviceorientation', handleTilt))
         .catch(console.error);
     } else {
-      // Non-iOS or older browsers
       window.addEventListener('deviceorientation', handleTilt);
     }
   }
   
-  // 2) The actual handler that maps gamma/beta → your CSS vars
   function handleTilt(event) {
-    // left/right tilt: gamma ∈ [-90,90], front/back tilt: beta ∈ [-180,180]
-    const gamma = event.gamma  ?? 0;
-    const beta  = event.beta   ?? 0;
+    const gamma = event.gamma ?? 0;
+    const beta  = event.beta  ?? 0;
+    console.log('tilt event:', { gamma, beta });
   
-    // dampen the effect so it’s not too jumpy
-    const rotY = gamma * 0.3; 
+    const rotY = gamma * 0.3;
     const rotX = beta  * 0.2;
   
-    // apply to the same CSS vars your mouse handlers use:
-    rotatingImgPre.style.setProperty('--rotateXPre', -rotX + 'deg');
     rotatingImgPre.style.setProperty('--rotateYPre',  rotY + 'deg');
-  
-    rotatingImg1.style.setProperty('--rotateX', -rotX + 'deg');
-    rotatingImg1.style.setProperty('--rotateY',  rotY + 'deg');
-  
-    rotatingImg2.style.setProperty('--rotateX2', -rotX + 'deg');
-    rotatingImg2.style.setProperty('--rotateY2',  rotY + 'deg');
+    rotatingImgPre.style.setProperty('--rotateXPre', -rotX + 'deg');
+    rotatingImg1.style .setProperty('--rotateY',     rotY + 'deg');
+    rotatingImg1.style .setProperty('--rotateX',    -rotX + 'deg');
+    rotatingImg2.style .setProperty('--rotateY2',    rotY + 'deg');
+    rotatingImg2.style .setProperty('--rotateX2',   -rotX + 'deg');
   }
   
-  // 3) Kick it off on page load (or tie to a button for iOS)
-  document.addEventListener('DOMContentLoaded', () => {
-    // on non-iOS this will start immediately
-    enableTilt();
-  
-    // on iOS, you could also wire this to a user button:
-    // document.getElementById('enableTiltBtn').addEventListener('click', enableTilt);
-  });
+  // call it right away (script is at end of body)
+  enableTilt();
