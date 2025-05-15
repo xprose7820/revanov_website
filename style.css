@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -60,16 +59,19 @@ header {
     font-size: .9rem;
     font-weight: 200;
     position: fixed;
-    height: 10vh;
+    top: 6vh;                   /* your existing offset */
+    left: 0;
     width: 100%;
-    color: white;
-    /* border: 5px blue solid; */
-    z-index: 10;
+    height: 10vh;
     padding-left: 7.5rem;
-    top: 6vh;
-    /* padding-right: 5rem; */
+    color: white;
+    z-index: 10;
     overflow: visible;
 
+    /* NEW: enable smooth translate animations */
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
 }
 
 
@@ -328,8 +330,8 @@ header {
     transform: translateZ(-1rem);
     filter: blur(9px) brightness(0);
     opacity: .7;
-   
-    
+
+
 }
 
 #rotatingImg1::before {
@@ -648,7 +650,7 @@ input:checked+.slider:before {
     justify-content: space-between;
     width: 24px;
     height: 18px;
-    margin-right: 1rem;
+    margin-right: 3.5rem;
 }
 
 .hamburger span {
@@ -690,54 +692,89 @@ nav.header-links {
     /* padding-left: 5rem; */
 
 }
- .header-wrapper {
-        display: flex;
-        align-items: center;
-        position: relative;    /* so nav absolute is relative here */
-      }
 
-/* ========== Mobile Styles ========== */
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* so nav absolute is relative here */
+}
+
 @media (max-width: 768px) {
+
+    /* Header in one line */
     header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1rem;
         height: auto;
     }
-    #coolE{ 
-        display: inline-block;    /* turn your SVG into an inline‐block box */
-  position: relative;       /* enable top/left offsets */
-  top: -5rem; 
-    }
 
-    /* Logo adjustments */
+    header>div:first-child {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    header.scrolled-down {
+        transform: translateY(-150%);  /* slide it up, out of view */
+      }
+
     #logo_id {
-        width: 3.1rem;
-        margin-bottom: 0.3rem;
-    }
-    #homeLink {
-        font-size: 2rem;
-        top: 0;
-    }
-    #upsideDownV {
-        top: 0.2rem !important;
-       
+        width: 3.5rem;
+        margin-bottom: 0;
     }
 
-    /* Show hamburger */
+    #homeLink {
+        font-size: 3rem !important;
+        top: 0 !important;
+    }
+
+    /* bump the whole SVG up/down and tweak its margins */
+    #coolE {
+        top: 0.1rem !important;
+        /* move the whole “E” up */
+        margin-left: -0.4rem !important;
+        margin-right: -0.4rem !important;
+        width: 1.5rem;
+    }
+
+    /* allow CSS transforms on <line> elements */
+    #coolE line {
+        transform-box: fill-box;
+        /* SVG 2 way to make transforms respect the shape’s box */
+        transform-origin: center;
+        /* pivot from the center of each line */
+        
+    }
+
+    /* nudge the top bar down by 2px */
+    #coolE line:nth-of-type(1) {
+        transform: translateY(1px);
+    }
+
+    /* leave the middle bar as-is */
+
+    /* nudge the bottom bar up by 2px */
+    #coolE line:nth-of-type(3) {
+        transform: translateY(-2px);
+    }
+
+    #upsideDownV {
+        top: .1vh !important;
+    }
+
     .hamburger {
         display: flex;
     }
 
-    /* Position wrapper to right */
-    .header-wrapper {
-        display: flex;
-        align-items: center;
-        position: relative;    /* so nav absolute is relative here */
-      }
-    /* Hide nav by default */
     nav.header-links {
         display: none;
+    }
+
+    nav.header-links.open {
+        display: flex;
         flex-direction: column;
         position: absolute;
         top: 100%;
@@ -747,72 +784,60 @@ nav.header-links {
         gap: 1rem;
         background: black;
         padding: 1rem;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
-    /* Show when toggled */
-    nav.header-links.open {
+
+    /* Cards stack */
+    .pre_secondCard,
+    .secondCard,
+    .thirdCard {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        margin-top: 2rem;
+        height: auto;
     }
 
-    /* Animate hamburger → “X” */
-    .hamburger.active span:nth-child(1) {
-        transform: translateY(7.5px) rotate(45deg);
+    #pre_secondCardText,
+    #secondCardText,
+    #thirdCardText {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
     }
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-    .hamburger.active span:nth-child(3) {
-        transform: translateY(-7.5px) rotate(-45deg);
-    }
-   /* Stack cards & center text */
-   
-   .pre_secondCard,
-   .secondCard,
-   .thirdCard {
-     display:flex; flex-direction:column;
-     align-items:center; padding:1rem 0;
-     margin-top:2rem; height:auto;
-   }
-   #pre_secondCardText,
-   #secondCardText,
-   #thirdCardText {
-     width:100%; text-align:center; margin-bottom:1rem;
-   }
- 
-   /* Responsive background-image divs */
-   
-  #rotatingImgPre,
-  #rotatingImg1,
-  #rotatingImg2 {
-    width: 50vw;               /* whatever fraction you like */
-    max-width: 350px;          /* don’t exceed your desktop size */
-    aspect-ratio: 350 / 350;   /* preserve original proportions */
-    margin: 0 auto 1.5rem;
-    padding: 2rem;             /* keep your padding if you want */
 
-    /* <<< new lines below >>> */
-    background-size: contain;  /* scale the PNG down to fit */
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  #rotatingImgPre{ 
-    height: 20vw;
-  }
-  
- #rotatingImg1{ 
-    height: 20vw;
- }
-   /* Tweak font sizes */
-   #pre_secondCardText h2,
-   #secondCardText h2 {
-     font-size:1.5rem;
-   }
-   #pre_secondCardText p {
-     font-size:0.9rem;
-   }
-   #pre_secondCardText {
-    height: auto;               /* let the content decide its height */
-    justify-content: flex-start;/* stack items without extra space */
-  }
-  
+    /* Responsive background-image divs */
+    #rotatingImgPre,
+    #rotatingImg1,
+    #rotatingImg2 {
+        width: 50vw;
+        max-width: 350px;
+        aspect-ratio: 350 / 350;
+        margin: 0 auto 1.5rem;
+        padding: 2rem;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #rotatingImgPre,
+    #rotatingImg1 {
+        height: 20vw;
+    }
+
+    /* Text spacing */
+    #pre_secondCardText {
+        height: auto;
+        justify-content: flex-start;
+    }
+
+    #pre_secondCardText h2,
+    #secondCardText h2 {
+        font-size: 1.5rem;
+    }
+
+    #pre_secondCardText p {
+        font-size: 0.9rem;
+    }
 }

@@ -342,3 +342,26 @@ function enableTilt() {
   if (mq.matches) {
     document.addEventListener('DOMContentLoaded', doMobileReorder);
   }
+
+
+
+  let lastScrollY = window.pageYOffset;
+const header     = document.querySelector('header');
+
+// on every scroll…
+window.addEventListener('scroll', () => {
+  // only on mobile widths
+  if (window.innerWidth > 768) return;
+
+  const currentScrollY = window.pageYOffset;
+  
+  if (currentScrollY > lastScrollY && currentScrollY > 50) {
+    // scrolled down: hide
+    header.classList.add('scrolled-down');
+  } else {
+    // scrolled up: show
+    header.classList.remove('scrolled-down');
+  }
+
+  lastScrollY = currentScrollY;
+});
