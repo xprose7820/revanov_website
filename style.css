@@ -618,7 +618,7 @@ input:checked+.slider:before {
     /* 1) a rainbow (or any) gradient twice as wide as the text */
     background: linear-gradient(
       to right,
-      #fb94ff 0%,   /* pink */
+      #94b8ff 0%,   /* pink */
       #ffffff 25%,  /* orange */
       #fb94ff 50%,  /* teal */
       #ffffff 75%,  /* blue */
@@ -635,4 +635,44 @@ input:checked+.slider:before {
   @keyframes colorWave {
     from { background-position: 0% 0; }
     to   { background-position: -200% 0; }
+  }
+
+  #logo_id {
+    width: 3.25rem;      /* ≈48px wide */
+    height: auto;
+    margin-bottom: .175rem;
+  }
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+      height: auto;
+    }
+    /* shrink the logo & title */
+    #logo_id {
+      
+      width: 3.1rem;
+      margin-bottom: 0.3rem;
+      height: auto;
+    }
+    #homeLink {
+      font-size: 2rem;
+      top: 0;            /* reset any negative “top” offset */
+    }
+    #upsideDownV{
+        top: .2rem !important;
+    }
+    /* re-flow the nav links */
+    .header-links {
+      width: 100%;
+      padding: 0;
+      margin-top: 0.5rem;
+      gap: 1rem;
+      justify-content: space-around;
+    }
+    .header-links div,
+    .header-links a {
+      font-size: 0.9rem;
+    }
   }

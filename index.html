@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>Revanov</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,20 +17,23 @@
   <body>
     <header style="font-weight: lighter">
       <div>
-        <img href="firstCardLink" id="logo_id" src="images/backgroundrem_shield.png" alt="Description of image" width="55rem">
+        <img href="firstCardLink" id="logo_id" src="images/backgroundrem_shield.png" alt="Description of image" >
         <a href="#firstCardLink" id="homeLink" style="position: relative; font-family: 'Titillium Web', sans-serif; top: -0.5rem; text-decoration: none; color: inherit; font-size: 4rem; font-weight: 200;">
           R
-          <svg width="30" height="55" viewBox="0 0 30 55" style="vertical-align: middle; position: relative; top: -0.25rem; padding:0; margin-left:-.6rem; margin-right:-.55rem;" xmlns="http://www.w3.org/2000/svg">
+          <svg width="30" height="65" viewBox="0 0 30 65" style="vertical-align: middle; position: relative; top: -0.01rem; padding:0; margin-left:-.6rem; margin-right:-.55rem;" xmlns="http://www.w3.org/2000/svg">
             <line x1="0" y1="5" x2="30" y2="5" stroke="currentColor" stroke-width="3"/>
             <line x1="0" y1="25" x2="30" y2="25" stroke="currentColor" stroke-width="3"/>
             <line x1="0" y1="45" x2="30" y2="45" stroke="currentColor" stroke-width="3"/>
           </svg>
-          V<span style="display:inline-block; transform: rotate(180deg); transform-origin: center; position: relative; top: 0.15rem;">V</span>NOV
+          V<span id="upsideDownV" style="display:inline-block; transform: rotate(180deg); transform-origin: center; position: relative; top: 0.15rem;">V</span>NOV
         </a>
       </div>
       <div class="header-links">
-        <div id="projectsLink"><a href="#pre_secondCardLink">Approach</a></div>
-        <div id="aboutMeTab">About</div>
+        <div class="header-links">
+          <a href="#pre_secondCardLink">Approach</a>
+          <a href="#aboutMeTab">About</a>
+        
+        </div>
         <label class="switch">
           <input type="checkbox" id="modeToggle" />
           <span class="slider round"></span>
@@ -50,13 +54,13 @@
       <section class="pre_secondCard" id="pre_secondCardLink">
         <div id="pre_secondCardText">
           <div style="font-size: 1.75rem; font-weight: bold; text-align: right;">Detection of Novel Threat Compounds</div>
-          <div style="font-weight: lighter; font-size: 1rem;">Using SOTA techniques, we're now able to accurately predict exact molecular structures of <span style="font-size: 1.25rem !important; font-weight: 600;">NOVEL</span> compounds directly from mass spectra—<span style="font-size: 1.25rem !important; font-weight: 600;">INDEPENDENT</span> of instrument type. 
+          <div style="font-weight: lighter; font-size: 1rem; line-height: 1.5rem;">Using SOTA techniques, we're now able to accurately predict exact molecular structures of <span style="font-size: 1.25rem !important; font-weight: 600;">NOVEL</span> compounds directly from mass spectra—<span style="font-size: 1.25rem !important; font-weight: 600;">INDEPENDENT</span> of instrument type. 
         
-        <p style="font-size: .8rem;">Future developments may incorporate additional modalities, such as FTIR, to enable multimodal data fusion and further enhance structural inference. </p>
+        <p style="font-size: .75rem;line-height: 1.25rem;">Future developments may incorporate additional modalities, such as FTIR, to enable multimodal data fusion and further enhance structural inference. </p>
           </div>
           <div id="techStackCustom1" style="font-weight: lighter;">
             <span class="color-wave">
-              {C2(c)[C@@]1c2C[C@@H]c@cc1[C@@H](C)C(=O)C2}
+              C2(c)[C@@]1c2C[C@@H]c@cc1[C@@H](C)C(=O)C2c
             </span>
           </div>
         </div>
@@ -74,7 +78,7 @@
           </div>
           <div id="techStackCustom1" style="font-weight: lighter;">
             <span class="color-wave">
-              {O1C=C[c@H]c@([c@H]1O2)c3cccc2cc(OC)c4c3C12}
+              O1C=C[c@H]c@([c@H]1O2)c3cccc2cc(OC)c4c3C12N
             </span>
           </div>
         </div>
