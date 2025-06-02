@@ -266,7 +266,7 @@ document.getElementById('aboutMeTab').addEventListener('click', function() {
 
 
 function copyEmail() {
-    var emailText = "xprose7820@gmail.com"; // Replace with your actual email address
+    var emailText = "alexh@revanov.com"; // Replace with your actual email address
     var tempInput = document.createElement("input");
     tempInput.value = emailText;
     document.body.appendChild(tempInput);
